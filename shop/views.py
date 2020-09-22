@@ -5,7 +5,7 @@ from .models import Catagory, Product
 def product_list(request, catagory_slug=None):
     catagory = None
     catagories = Catagory.objects.all()
-    products = Product.objects.filter(availabe=True)
+    products = Product.objects.filter(available=True)
     if catagory_slug:
         catagory = get_object_or_404(Catagory, slug=catagory_slug)
         products = products.filter(catagory=catagory)
