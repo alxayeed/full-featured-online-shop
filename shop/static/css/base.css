@@ -190,6 +190,10 @@ ul.errorlist {
     line-height:1.2;
 }
 
+#product-img {
+    border-radius: 15px 0px 15px 0px;
+}
+
 .product-list .item img {
     width:100%;
     margin-bottom:8px;
@@ -197,18 +201,29 @@ ul.errorlist {
 
 .product-detail {
     text-align:justify;
+    display: flex;
+    flex-direction: row;
+}
+
+.product-detail .right{
+    background-color: #ececec;
+    padding: 10px;
+    margin: 10px;
 }
 
 .product-detail .price {
     color:#333;
     font-size:28px;
     font-weight:bold;
+    border: 5px;
+    padding: 5px;
 }
 
 .product-detail img {
-    width:40%;
-    float:left;
-    padding:0 20px 20px 0;
+    margin: 10px;
+    width:90%;
+    /* float:left; */
+    /* padding:0 20px 20px 0; */
 }
 
 .product-detail h1 {
@@ -325,4 +340,10 @@ form div.field {
     background:#efefef;
     color:#666;
     border-radius:4px;
+}
+
+@media screen and (max-width: 1200px){
+    .main-container{
+        width: 95%;
+    }
 }
