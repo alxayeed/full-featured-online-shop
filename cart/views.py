@@ -38,4 +38,4 @@ def cart_detail(request):
     method for showing details of the cart
     '''
     cart = Cart(request)
-    return render(request, 'cart/detail.html', {'cart': cart})
+    return render(request, 'cart/details.html', {'cart': cart})
