@@ -38,4 +38,9 @@ def cart_detail(request):
     method for showing details of the cart
     '''
     cart = Cart(request)
+    for item in cart:
+        item['update_quantity_form'] = CarAddProductForm(initial={
+            'quantity': item['quantity'],
+            'override': True
+        })
     return render(request, 'cart/details.html', {'cart': cart})
