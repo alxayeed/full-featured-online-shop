@@ -17,6 +17,11 @@
             </a>
         </h2>
         <p class="price" style="font-style: italic;">$ {{ product.price }}</p>
+        <form action="{% url 'cart:add_cart' product.id %}" method="POST">
+            {{ cart_product_form }}
+            {% csrf_token %}
+            <input type="submit" value="Add to cart">
+        </form>
         {{ product.description|linebreaks }}
     </div>
 </div>
