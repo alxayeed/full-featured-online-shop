@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import OrderItem
 from .forms import OrderCreationForm
 from cart.cart import Cart
+from .tasks import order_created
 
 
 def order_create(request):
@@ -18,6 +19,9 @@ def order_create(request):
 
             # clear the cart from the session
             cart.clear()
+            # send the task of sending email to celery
+            order_created.delay(order.id)
+
             return render(request, 'orders/order/created.html',
                           {'order': order})
 
