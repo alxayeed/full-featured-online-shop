@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import OrderItem
 from .forms import OrderCreationForm
 from cart.cart import Cart
 from .tasks import order_created
+from django.urls import reverse
 
 
 def order_create(request):
@@ -22,8 +23,9 @@ def order_create(request):
             # send the task of sending email to celery
             order_created.delay(order.id)
 
-            return render(request, 'orders/order/created.html',
-                          {'order': order})
+            # redirect to payment module for handling the payments
+            request.session['order_id'] = order.id
+            return redirect(reverse('payment:process'))
 
     else:
         form = OrderCreationForm()
