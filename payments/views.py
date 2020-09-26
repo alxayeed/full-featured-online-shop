@@ -17,7 +17,7 @@ def process_payment(request):
         nonce = request.POST.get('payment_method_nonce', None)
 
         # create and submit transiction
-        result = gateway.transiction.sale({
+        result = gateway.transaction.sale({
             'amount': f'{total_cost:.2f}',
             'payment_method_nonce': nonce,
             'options': {
@@ -39,8 +39,8 @@ def process_payment(request):
         # generate token for the payment form
         client_token = gateway.client_token.generate()
         return render(request,
-                      {'payment/process.html',
-                       'order': order,
+                      'payment/process.html',
+                      {'order': order,
                        'client_token': client_token})
 
 
