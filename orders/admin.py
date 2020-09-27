@@ -15,12 +15,9 @@ class OrderItemAdmin(admin.TabularInline):
 
 def export_to_csv(modeladmin, request, queryset):
     opts = modeladmin.model._meta
-    # print(opts.verbose_name)
-    # content_disposition = 'attachment; filename="some.csv"'
+    print(queryset)
     response = HttpResponse(content_type='text/csv')
-    # response['Content-Dispostion'] = content_disposition
-    response['Content-Disposition'] = 'attachment; filename="order.csv"'
-
+    response['Content-Disposition'] = f'filename=report_{opts.verbose_name}.csv'
     writer = csv.writer(response)
 
     fields = [field for field in opts.get_fields() if not
