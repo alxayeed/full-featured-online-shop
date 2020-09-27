@@ -184,6 +184,7 @@ ul.errorlist {
 
 .product-list .item {
     width:25%;
+    height: 25%;
     padding:10px 20px 10px 0;
     float:left;
     text-align:center;
