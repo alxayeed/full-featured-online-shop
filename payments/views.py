@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.conf import settings
 from orders.models import Order
 from .tasks import payment_completed
+from cart.cart import Cart
 
 
 # instantiate braintree payment gateway
@@ -10,11 +11,15 @@ gateway = braintree.BraintreeGateway(settings.BRAINTREE_CONF)
 
 
 def process_payment(request):
+    print(request.session.keys())
     order_id = request.session.get('order_id')
+    cart = request.session.get('cart')
     order = get_object_or_404(Order, id=order_id)
     total_cost = order.get_total_cost()
 
     if request.method == 'POST':
+
+        # print('I am', cart)
         # retirieve nonce
         nonce = request.POST.get('payment_method_nonce', None)
 
@@ -34,6 +39,9 @@ def process_payment(request):
             order.braintree_id = result.transiction.id
             order.save()
             # launch a async task to send mail to the buyer
+            # cart = request.session[cart]
+            cart.clear()
+
             payment_completed.delay(order.id)
             return redirect('payment:done')
         else:

@@ -15,6 +15,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 
 def order_create(request):
     cart = Cart(request)
+    # print(dir(cart))
     if request.method == 'POST':
         form = OrderCreationForm(request.POST)
         if form.is_valid():
@@ -26,12 +27,13 @@ def order_create(request):
                                          quantity=item['quantity'])
 
             # clear the cart from the session
-            cart.clear()
+            # cart.clear()
             # send the task of sending email to celery
             order_created.delay(order.id)
 
             # redirect to payment module for handling the payments
             request.session['order_id'] = order.id
+
             return redirect(reverse('payment:process'))
 
     else:
