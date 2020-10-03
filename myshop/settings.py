@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rosetta',
+    'parler',
 ]
 
 MIDDLEWARE = [
@@ -124,6 +125,18 @@ LANGUAGES = (
     ('es', _('Spanish')),
     ('bn-BD', _('Bangla')),
 )
+
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en'},
+        {'code': 'bn-BD'},
+        {'code': 'es'},
+    ),
+    'default': {
+        'fallback': 'en',
+        'hide_untranslated': False,
+    }
+}
 
 TIME_ZONE = 'UTC'
 
