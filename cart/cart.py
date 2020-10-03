@@ -17,7 +17,7 @@ class Cart(object):
             cart = self.session[settings.CART_SESSION_ID] = {}
         self.cart = cart
         # store coupon_id from session
-        print(self.session.get('coupon_id'))
+        # print(self.session.get('coupon_id'))
         self.coupon_id = self.session.get('coupon_id')
 
     def add(self, product, quantity=0, override_quantity=False):
@@ -89,9 +89,7 @@ class Cart(object):
 
     @property
     def coupon(self):
-        print('Hello')
         if self.coupon_id:
-            print('Hi')
             try:
                 return Coupon.objects.get(id=self.coupon_id)
 
