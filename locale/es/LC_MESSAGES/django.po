@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-03 11:25+0600\n"
+"POT-Creation-Date: 2020-10-03 12:45+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,74 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: cart/forms.py:11 cart/templates/cart/details.html:14
+msgid "Quantity"
+msgstr ""
+
+#: cart/templates/cart/details.html:5
+msgid "Shopping cart"
+msgstr ""
+
+#: cart/templates/cart/details.html:8
+msgid "Your shopping Cart"
+msgstr ""
+
+#: cart/templates/cart/details.html:12
+msgid "Image"
+msgstr ""
+
+#: cart/templates/cart/details.html:13
+msgid "Product"
+msgstr ""
+
+#: cart/templates/cart/details.html:15
+msgid "remove"
+msgstr ""
+
+#: cart/templates/cart/details.html:16
+msgid "unit Price"
+msgstr ""
+
+#: cart/templates/cart/details.html:17
+msgid "Price"
+msgstr ""
+
+#: cart/templates/cart/details.html:35
+msgid "Update"
+msgstr ""
+
+#: cart/templates/cart/details.html:41
+msgid "Remove"
+msgstr ""
+
+#: cart/templates/cart/details.html:51 cart/templates/cart/details.html:73
+msgid "Total"
+msgstr ""
+
+#: cart/templates/cart/details.html:57
+msgid "Subtotal"
+msgstr ""
+
+#: cart/templates/cart/details.html:79
+msgid "Apply a coupon"
+msgstr ""
+
+#: cart/templates/cart/details.html:82
+msgid "Apply"
+msgstr ""
+
+#: cart/templates/cart/details.html:87
+msgid "Continue Shopping"
+msgstr ""
+
+#: cart/templates/cart/details.html:88
+msgid "Checkout"
+msgstr ""
+
+#: coupon/forms.py:6
+msgid "Coupon"
+msgstr ""
 
 #: myshop/settings.py:122
 msgid "English"
@@ -29,3 +97,49 @@ msgstr "Español"
 #: myshop/settings.py:124
 msgid "Bangla"
 msgstr "Bengalí"
+
+#: shop/templates/shop/base.html:9
+msgid "Online Shop"
+msgstr ""
+
+#: shop/templates/shop/base.html:18
+msgid "My shop"
+msgstr ""
+
+#: shop/templates/shop/base.html:24
+msgid "Your cart"
+msgstr ""
+
+#: shop/templates/shop/base.html:26
+#, python-format
+msgid ""
+"\n"
+"                    %(items)s item, $%(total)s\n"
+"                    "
+msgid_plural ""
+"\n"
+"                    %(items)s items, $%(total)s\n"
+"                    "
+msgstr[0] ""
+msgstr[1] ""
+
+#: shop/templates/shop/base.html:33
+msgid "Your cart is empty"
+msgstr ""
+
+#: shop/templates/shop/product/details.html:24
+msgid "Add to cart"
+msgstr ""
+
+#: shop/templates/shop/product/list.html:5
+#: shop/templates/shop/product/list.html:22
+msgid "Products"
+msgstr ""
+
+#: shop/templates/shop/product/list.html:9
+msgid "Categories"
+msgstr ""
+
+#: shop/templates/shop/product/list.html:12
+msgid "All"
+msgstr ""
