@@ -1,9 +1,10 @@
 from django.urls import path
 from . import views
+from django.utils.translation import gettext_lazy as _
 
 app_name = 'payment'
 urlpatterns = [
-    path('process/', views.process_payment, name='process'),
-    path('done/', views.payment_done, name='done'),
-    path('canceled/', views.payment_canceled, name='canceled'),
+    path(_('process/'), views.process_payment, name='process'),
+    path(_('done/'), views.payment_done, name='done'),
+    path(_('canceled/'), views.payment_canceled, name='canceled'),
 ]

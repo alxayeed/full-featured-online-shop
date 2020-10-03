@@ -8,107 +8,141 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-03 12:45+0600\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2020-10-03 15:33+0600\n"
+"PO-Revision-Date: 2020-10-03 09:36+0000\n"
+"Last-Translator: b'  <alxayeed@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.3\n"
 
 #: cart/forms.py:11 cart/templates/cart/details.html:14
 msgid "Quantity"
-msgstr ""
+msgstr "পরিমাণ"
 
 #: cart/templates/cart/details.html:5
 msgid "Shopping cart"
-msgstr ""
+msgstr "শপিং কার্ট"
 
 #: cart/templates/cart/details.html:8
 msgid "Your shopping Cart"
-msgstr ""
+msgstr "আপনার শপিং কার্ট"
 
 #: cart/templates/cart/details.html:12
 msgid "Image"
-msgstr ""
+msgstr "ছবি"
 
 #: cart/templates/cart/details.html:13
 msgid "Product"
-msgstr ""
+msgstr "পণ্য"
 
 #: cart/templates/cart/details.html:15
 msgid "remove"
-msgstr ""
+msgstr "রিমুভ"
 
 #: cart/templates/cart/details.html:16
 msgid "unit Price"
-msgstr ""
+msgstr "ইউনিট মূল্য"
 
 #: cart/templates/cart/details.html:17
 msgid "Price"
-msgstr ""
+msgstr "মূল্য"
 
 #: cart/templates/cart/details.html:35
 msgid "Update"
-msgstr ""
+msgstr "আপডেট"
 
 #: cart/templates/cart/details.html:41
 msgid "Remove"
-msgstr ""
+msgstr "রিমুভ"
 
 #: cart/templates/cart/details.html:51 cart/templates/cart/details.html:73
 msgid "Total"
-msgstr ""
+msgstr "সর্বমোট"
 
 #: cart/templates/cart/details.html:57
 msgid "Subtotal"
-msgstr ""
+msgstr "আংশিক মোট"
 
 #: cart/templates/cart/details.html:79
 msgid "Apply a coupon"
-msgstr ""
+msgstr "কুপন প্রয়োগ করুন"
 
 #: cart/templates/cart/details.html:82
 msgid "Apply"
-msgstr ""
+msgstr "এপ্লাই"
 
 #: cart/templates/cart/details.html:87
 msgid "Continue Shopping"
-msgstr ""
+msgstr "শপিং চালিয়ে যান"
 
 #: cart/templates/cart/details.html:88
 msgid "Checkout"
-msgstr ""
+msgstr "চেকআউট"
 
 #: coupon/forms.py:6
 msgid "Coupon"
-msgstr ""
-
-#: myshop/settings.py:122
-msgid "English"
-msgstr ""
+msgstr "কুপন"
 
 #: myshop/settings.py:123
-msgid "Spanish"
-msgstr ""
+msgid "English"
+msgstr "ইংরেজি"
 
 #: myshop/settings.py:124
+msgid "Spanish"
+msgstr "স্প্যানিশ"
+
+#: myshop/settings.py:125
 msgid "Bangla"
-msgstr ""
+msgstr "বাংলা"
+
+#: myshop/urls.py:9
+msgid "admin/"
+msgstr "এডমিন/"
+
+#: myshop/urls.py:10
+msgid "cart/"
+msgstr "কার্ট/"
+
+#: myshop/urls.py:11
+msgid "orders/"
+msgstr "অর্ডারসমূহ/"
+
+#: myshop/urls.py:12
+msgid "payments/"
+msgstr "পেমেন্ট/"
+
+#: myshop/urls.py:13
+#| msgid "Coupon"
+msgid "coupons/"
+msgstr "কুপন/"
+
+#: payments/urls.py:7
+msgid "process/"
+msgstr "প্রসেস/"
+
+#: payments/urls.py:8
+msgid "done/"
+msgstr "সমপন্ন/"
+
+#: payments/urls.py:9
+msgid "canceled/"
+msgstr "বাতিল/"
 
 #: shop/templates/shop/base.html:9
 msgid "Online Shop"
-msgstr ""
+msgstr "অনলাইন শপ"
 
 #: shop/templates/shop/base.html:18
 msgid "My shop"
-msgstr ""
+msgstr "আমার শপ"
 
 #: shop/templates/shop/base.html:24
 msgid "Your cart"
-msgstr ""
+msgstr "আপনার কার্ট"
 
 #: shop/templates/shop/base.html:26
 #, python-format
@@ -121,25 +155,29 @@ msgid_plural ""
 "                    %(items)s items, $%(total)s\n"
 "                    "
 msgstr[0] ""
+"\n"
+"%(items)s আইটেম, $%(total)s"
 msgstr[1] ""
+"\n"
+"%(items)s আইটেম, $%(total)s"
 
 #: shop/templates/shop/base.html:33
 msgid "Your cart is empty"
-msgstr ""
+msgstr "আপনার কার্ট খালি"
 
 #: shop/templates/shop/product/details.html:24
 msgid "Add to cart"
-msgstr ""
+msgstr "কার্টে যোগ করুন"
 
 #: shop/templates/shop/product/list.html:5
 #: shop/templates/shop/product/list.html:22
 msgid "Products"
-msgstr ""
+msgstr "পন্যসমূহ"
 
 #: shop/templates/shop/product/list.html:9
 msgid "Categories"
-msgstr ""
+msgstr "বিভাগসমূহ"
 
 #: shop/templates/shop/product/list.html:12
 msgid "All"
-msgstr ""
+msgstr "সব"
