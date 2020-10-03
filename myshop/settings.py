@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',  # have a look on appconfig
     'payments.apps.PaymentsConfig',
+    'coupon.apps.CouponConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
