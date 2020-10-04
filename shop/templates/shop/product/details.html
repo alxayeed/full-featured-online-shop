@@ -26,7 +26,7 @@
         {{ product.description|linebreaks }}
         {% if recommended_products %}
         <div class="recommendations">
-            <h3>{% trans "People also bought with this" %}</h3>
+            <h3>{% trans "People also likes" %}</h3>
             {% for p in recommended_products %}
             <div class="item">
                 <a href="{{ p.get_absolute_url }}">
